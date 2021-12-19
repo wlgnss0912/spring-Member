@@ -9,14 +9,14 @@ public class MemberServiceTest {
 
     @Test
     void join(){
-        //given
+        //given-이런게 주어졌을 경우
         Member member = new Member(1L, "memberA", Grade.VIP);
 
-        //when
+        //when-이것을 했을때
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
 
-        //then
+        //then-이렇게된다
         Assertions.assertThat(member).isEqualTo(findMember);
     }
 
